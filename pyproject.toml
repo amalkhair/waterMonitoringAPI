@@ -1,0 +1,11 @@
+[project]
+name = "watermonitoringapi"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.12",
+    "mysql-connector>=2.2.9",
+    "uvicorn>=0.34.2",
+]
