@@ -8,7 +8,7 @@ import mysql.connector
 import mysql
 
 # Gmail login credentials
-sender_email = "amal.indarto@gmail.com"
+sender_email = "****************@gmail.com"
 gmail_password = os.environ.get("GMAIL_PASSWORD")
 
 print(f"------Ini password GMAIL dari ENVIRONEMENT: {gmail_password}")
@@ -23,9 +23,7 @@ def hash_password(password: str) -> str:
 def verify_password(password: str, hashed_password: str) -> bool:
     return bcrypt.checkpw(password.encode('utf-8'), hashed_password.encode('utf-8'))
 
-
-
-
+#checks gmail password
 if not gmail_password:
     print("App password not set. Please set the APP_PASSWORD environment variable.")
     exit(1)

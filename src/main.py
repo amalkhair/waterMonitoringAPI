@@ -61,10 +61,9 @@ async def upload_data(payload: DataPayload):
     save_to_database(incoming_data)
 
     global email_has_been_send
-    if tds < 50 and email_has_been_send:
-        print("TDS is less than 50")
+    if tds < 100 and email_has_been_send:
+        print("TDS has reached its threshold!")
         email_has_been_send = False
-        # send_mail("TDS reach the Threshold", f"Hi...the TDS is {tds}", "umar.fth@gmail.com")
 
     print(json.dumps(incoming_data, indent=4))
 
